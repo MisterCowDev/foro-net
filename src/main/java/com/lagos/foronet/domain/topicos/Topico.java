@@ -1,6 +1,7 @@
 package com.lagos.foronet.domain.topicos;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -32,4 +33,23 @@ public class Topico {
 
     private String autor;
     private String curso;
+
+    public void updateDatos(@Valid DatosActualizarTopico datosActualizarTopico) {
+        if (datosActualizarTopico.autor() != null){
+            this.autor = datosActualizarTopico.autor();
+        }
+        if (datosActualizarTopico.titulo() != null){
+            this.titulo = datosActualizarTopico.titulo();
+        }
+        if (datosActualizarTopico.mensaje() != null){
+            this.mensaje = datosActualizarTopico.mensaje();
+        }
+        if (datosActualizarTopico.curso() != null){
+            this.curso = datosActualizarTopico.curso();
+        }
+    }
+
+    public void desactivarTopico() {
+        this.estado = Estado.INACTIVO;
+    }
 }
