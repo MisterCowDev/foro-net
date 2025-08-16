@@ -1,4 +1,4 @@
-package com.lagos.foronet.domain;
+package com.lagos.foronet.domain.topicos;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -27,6 +27,7 @@ public class Topico {
     private LocalDateTime fechaCreacion;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "status")
     private Estado estado;
 
     private String autor;

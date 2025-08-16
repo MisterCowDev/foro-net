@@ -1,6 +1,5 @@
-package com.lagos.foronet.domain;
+package com.lagos.foronet.domain.topicos;
 
-import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

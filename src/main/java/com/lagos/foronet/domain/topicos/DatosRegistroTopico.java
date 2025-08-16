@@ -1,4 +1,4 @@
-package com.lagos.foronet.controller;
+package com.lagos.foronet.domain.topicos;
 
 import jakarta.validation.constraints.NotBlank;
 

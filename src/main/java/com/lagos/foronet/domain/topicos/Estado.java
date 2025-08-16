@@ -1,4 +1,4 @@
-package com.lagos.foronet.domain;
+package com.lagos.foronet.domain.topicos;
 
 public enum Estado {
     ACTIVO,
