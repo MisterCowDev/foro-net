@@ -8,7 +8,8 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Table(name = "topicos")
+@Table(name = "topicos",
+uniqueConstraints = @UniqueConstraint(columnNames = {"titulo", "mensaje"}))
 @Entity(name = "Topico")
 @Getter
 @NoArgsConstructor
